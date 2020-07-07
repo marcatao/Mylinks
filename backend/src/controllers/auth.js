@@ -11,14 +11,16 @@ router.get('/sign-in', (req, res)=>{
 
 router.get('/sign-up', async (req, res)=>{
 
-    const email = 'thiagomarcato@gmail.com';
- 
-    const password = bycrypt.hashSync('123456',saltRounds)
-    const result = await Account.create({email, password });
+    const {email, password } = req.body;
 
-     
+    console.log({email, password})
+    const hash = bycrypt.hashSync(password,saltRounds)
 
-    return res.json(result)
+    const account = await Account.findOne({where: {email:email}});
+    if(account) return res.jsonBadRequest(null , 'Account already exits');
+
+    const result = await Account.create({email, password: hash });
+    return res.jsonOK(result)
 });
 
 module.exports  = router;

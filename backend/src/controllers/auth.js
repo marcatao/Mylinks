@@ -1,6 +1,8 @@
 const express = require('express')
 const bycrypt = require('bcrypt')
 const {Account} = require('../models')
+const { accountSignUp } = require('../validators/account');
+
 const router = express.Router();
 
 const saltRounds = 10;
@@ -9,7 +11,7 @@ router.get('/sign-in', (req, res)=>{
     return res.json('sing-in')
 });
 
-router.get('/sign-up', async (req, res)=>{
+router.get('/sign-up', accountSignUp, async (req, res)=>{
 
     const {email, password } = req.body;
 

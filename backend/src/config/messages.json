@@ -1,0 +1,4 @@
+{
+    "account.signup.password_confirmation.any.required" : "confirmação é obrigatória.",
+    "account.signup.password.string.empty" : "Senha é obrigatória."
+}

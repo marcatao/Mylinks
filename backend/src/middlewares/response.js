@@ -23,7 +23,7 @@ const jsonBadRequest = function (data, message, metadata){
   return this.json({message, data, metadata, status:STATUS_CODE_BAD_REQUEST});
 };
 //----------------------------------------------------------
-const jsonUnauthorized = function ({data, message, metadata}){
+const jsonUnauthorized = function (data, message, metadata){
     message = (message) ? message: 'Unauthorized';
     metadata = (metadata) ? metadata: {};
 

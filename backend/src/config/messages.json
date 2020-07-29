@@ -1,4 +1,7 @@
 {
+    "account.signup.email.any.required" : "Campo email e obrigatório",
     "account.signup.password_confirmation.any.required" : "confirmação é obrigatória.",
-    "account.signup.password.string.empty" : "Senha é obrigatória."
+    "account.signup.password.string.empty" : "Senha é obrigatória.",
+    "account.signup.email_existis":"Conta ja existe",
+    "account.signup.account.created" : "Conta criada com sucesso"
 }

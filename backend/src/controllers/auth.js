@@ -3,7 +3,7 @@ const bycrypt = require('bcrypt')
 const {Account} = require('../models')
 const { accountSignUp } = require('../validators/account');
 const { getMessage } = require('../helpers/validator');
-
+    
 
 const router = express.Router();
 

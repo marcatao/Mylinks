@@ -12,7 +12,7 @@ const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: './database/database.sqlite'
 });
-
+   
 fs
   .readdirSync(__dirname)
   .filter(file => {
